@@ -1,21 +1,39 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="shared-styles.html">
 
-
 <dom-module id="hello-world">
   <template>
     <style include="shared-styles">
-      h1 {
+      h1,
+      h2 {
         color: #27213C;
         font-family: 'Quicksand', sans-serif;
         text-align: center;
       }
     </style>
-      <h1>Maps</h1>
+      <h1>{{fullName}}</h1>
+      <!-- <h2>{{location}}</h2> -->
   </template>
   <script>
     Polymer({
-      is: 'hello-world'
+      is: 'hello-world',
+
+      properties: {
+        name: String,
+        location: {
+          type: String,
+          value: 'Choose your location'
+        },
+        fullName: {
+          type: String,
+          computed: 'computeFullName(name, location)'
+        }
+      },
+
+      computeFullName: function(name, location) {
+        return name + ' ' + location;
+      }
+
     });
   </script>
 </dom-module>
