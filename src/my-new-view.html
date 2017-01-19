@@ -1,4 +1,5 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/google-map/google-map.html">
 
 <dom-module id="my-new-view">
   <template>
@@ -8,14 +9,13 @@
 
         padding: 10px;
       }
-    </style>
 
-    <div class="card">
-      <div class="circle">New</div>
-      <h1>Peace</h1>
-      <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
-      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius aliquam, est id tempor laoreet.Pro saepe pertinax ei, ad pri animal labores suscipiantur.</p>
-    </div>
+      google-map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <google-map latitude="39.7392" longitude="-104.9903"></google-map>
   </template>
 
   <script>
@@ -23,4 +23,5 @@
       is: 'my-new-view',
     });
   </script>
+  <script src="../bower_components/webcomponentsjs/webcomponents.js"></script>
 </dom-module>
