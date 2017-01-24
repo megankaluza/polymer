@@ -95,6 +95,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           navigator.serviceWorker.register('/service-worker.js');
         });
       }
+
+      document.addEventListener('login', function(service) {
+        // handleLogin();
+        alert(service.detail);
+      });
     </script>
 
     <link rel="import" href="/src/my-app.html">

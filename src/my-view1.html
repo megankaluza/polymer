@@ -22,14 +22,101 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         font-family: 'Quicksand', sans-serif;
 
       }
+
+      .logo {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+      }
+
+      .wrapper {
+        background-image: url('../images/city.jpg');
+        background-size: cover;
+      }
+
+      #show {
+        display: none;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #C16E70;
+      }
+
+      p {
+        text-align: center;
+        margin: 20px;
+      }
+
+      paper-button.login {
+        display: block;
+        margin: 0 auto;
+        margin-top: 40px;
+        width: 400px;
+        background: white;
+        border: 2px solid #12377E;
+        color: black;
+        text-align: center;
+      }
+
+      paper-button.social {
+        display: inline-block;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 197px;
+        background: #12377E;
+        color: white;
+        text-align: center;
+      }
+
+      paper-button.google {
+        background: #DB4437;
+      }
+
+      paper-checkbox {
+        margin-top: 40px;
+        left: 20px;
+      }
+
+      paper-checkbox.blue {
+      --paper-checkbox-checked-color: var(--paper-blue-500);
+      --paper-checkbox-checked-ink-color: var(--paper-blue-500);
+      --paper-checkbox-unchecked-color: var(--paper-blue-900);
+      --paper-checkbox-unchecked-ink-color: var(--paper-blue-900);
+      --paper-checkbox-label-color: var(--paper-blue-500);
+      --paper-checkbox-label-checked-color: var(--paper-blue-900);
+    }
     </style>
 
-    <div class="card">
+<div class="wrapper">
+    <div class="login">
       <!-- <div class="circle">1</div> -->
-      <h1>Home</h1>
-      <p>Hello and Welcome</p>
-      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
+      <h2>Welcome to</h2>
+        <img src="../images/zeppidy.png" alt="Zeppidy Logo" class="logo">
+      <p>Click <a href="#"><strong>here</strong></a> to create an account.</p>
+      <paper-input label="username"></paper-input>
+      <paper-textarea label="autoresizing textarea input"></paper-textarea>
+      <paper-input label="password" type="password"></paper-input>
+
+      <span id="hide"><iron-icon icon="social:sentiment-very-dissatisfied"></iron-icon>Hide</span>
+      <span id="show"><iron-icon icon="social:sentiment-satisfied" on-click="_onClick"></iron-icon>Show</span>
+
+      <paper-button class="login">Login</paper-button>
+      <paper-button class="social google">Google</paper-button>
+      <paper-button class="social">Facebook</paper-button>
+
+
+      <paper-checkbox class="blue">Keep me logged in</paper-checkbox>
+      <br>
+      <br>
+      <p><a href="#">Forgot username?</a>  &#x26AC;  <a href="#">Forgot password?</a></p>
+
     </div>
+  </div>
   </template>
 
   <script>
